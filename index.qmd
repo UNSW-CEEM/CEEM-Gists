@@ -8,7 +8,7 @@ This site hosts code snippets shared by members of the [UNSW Collaboration on En
 
 All source code available on this website and its corresponding repository are licensed under the terms of GPL-3.0-or-later.
 
-For the license details, please see the repository [licese](https://github.com/UNSW-CEEM/CEEM-Gists/blob/main/LICENSE).
+For the license details, please see the repository [license](https://github.com/UNSW-CEEM/CEEM-Gists/blob/main/LICENSE).
 
 ## About this site
 
