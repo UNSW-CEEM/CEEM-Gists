@@ -7,7 +7,7 @@ Please only share code snippets or scripts that you are happy to be available pu
 ## Preparing your script/code
 
 1. Though the website and repository contains license conditions, we suggest you include this snippet as a preface to any source code:
-   
+
     ```text
     <one line to give the program's name and a brief idea of what it does.>
         Copyright (C) <year>  <name of author>
@@ -35,4 +35,3 @@ Please only share code snippets or scripts that you are happy to be available pu
       - Create the folder in [`snippets`](https://github.com/UNSW-CEEM/CEEM-Gists/snippets)
       - Create a corresponding `.qmd` file in the root of the repository
       - In the [Quarto YAML config](https://github.com/UNSW-CEEM/CEEM-Gists/_quarto.yml), add the `.qmd` under the snippets menu
-  

@@ -15,7 +15,7 @@ website:
         href: index.qmd
       - text: "Snippets"
         menu:
-        - aemo_data.qmd 
+        - aemo_data.qmd
       - text: Contributing
         href: contributing.qmd
     right:
@@ -38,6 +38,3 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
-
-
-

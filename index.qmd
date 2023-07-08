@@ -13,4 +13,3 @@ For the license details, please see the repository [licese](https://github.com/U
 ## About this site
 
 This is a [Quarto](https://quarto.org/docs/websites) website.
-
