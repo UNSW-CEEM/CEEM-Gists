@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "CEEM-Gists",
+    "section": "",
+    "text": "This site hosts code snippets shared by members of the UNSW Collaboration on Energy and Environmental Markets (CEEM)."
+  },
+  {
+    "objectID": "index.html#using-these-snippets",
+    "href": "index.html#using-these-snippets",
+    "title": "CEEM-Gists",
+    "section": "Using these snippets",
+    "text": "Using these snippets\nAll source code available on this website and its corresponding repository are licensed under the terms of GPL-3.0-or-later.\nFor the license details, please see the repository licese."
+  },
+  {
+    "objectID": "index.html#about-this-site",
+    "href": "index.html#about-this-site",
+    "title": "CEEM-Gists",
+    "section": "About this site",
+    "text": "About this site\nThis is a Quarto website."
+  },
+  {
+    "objectID": "contributing.html",
+    "href": "contributing.html",
+    "title": "Contributing",
+    "section": "",
+    "text": "Please only share code snippets or scripts that you are happy to be available publicly."
+  },
+  {
+    "objectID": "contributing.html#preparing-your-scriptcode",
+    "href": "contributing.html#preparing-your-scriptcode",
+    "title": "Contributing",
+    "section": "Preparing your script/code",
+    "text": "Preparing your script/code\n\nThough the website and repository contains license conditions, we suggest you include this snippet as a preface to any source code:\n&lt;one line to give the program's name and a brief idea of what it does.&gt;\n    Copyright (C) &lt;year&gt;  &lt;name of author&gt;\n\n    This program is free software: you can redistribute it and/or modify\n    it under the terms of the GNU General Public License as published by\n    the Free Software Foundation, either version 3 of the License, or\n    (at your option) any later version.\n\n    This program is distributed in the hope that it will be useful,\n    but WITHOUT ANY WARRANTY; without even the implied warranty of\n    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n    GNU General Public License for more details.\n\n    You should have received a copy of the GNU General Public License\n    along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.\n[Optional] Format your code using black and isort. This step is optional because these will be automatically run on any pull requests.\nFork this repo or clone and create a new branch\nAdd your source code to the folder that best matches what it does or pertains to.\n\nIf you need to create a new folder/page:\n\nCreate the folder in snippets\nCreate a corresponding .qmd file in the root of the repository\nIn the Quarto YAML config, add the .qmd under the snippets menu"
+  }
+]
