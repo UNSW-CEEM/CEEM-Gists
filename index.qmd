@@ -1,0 +1,16 @@
+---
+title: "CEEM-Gists"
+---
+
+This site hosts code snippets shared by members of the [UNSW Collaboration on Energy and Environmental Markets (CEEM)](https://www.ceem.unsw.edu.au/).
+
+## Using these snippets
+
+All source code available on this website and its corresponding repository are licensed under the terms of GPL-3.0-or-later.
+
+For the license details, please see the repository [licese](https://github.com/UNSW-CEEM/CEEM-Gists/blob/main/LICENSE).
+
+## About this site
+
+This is a [Quarto](https://quarto.org/docs/websites) website.
+

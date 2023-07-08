@@ -1,0 +1,38 @@
+---
+title: Contributing
+---
+
+Please only share code snippets or scripts that you are happy to be available publicly.
+
+## Preparing your script/code
+
+1. Though the website and repository contains license conditions, we suggest you include this snippet as a preface to any source code:
+   
+    ```text
+    <one line to give the program's name and a brief idea of what it does.>
+        Copyright (C) <year>  <name of author>
+
+        This program is free software: you can redistribute it and/or modify
+        it under the terms of the GNU General Public License as published by
+        the Free Software Foundation, either version 3 of the License, or
+        (at your option) any later version.
+
+        This program is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        GNU General Public License for more details.
+
+        You should have received a copy of the GNU General Public License
+        along with this program.  If not, see <https://www.gnu.org/licenses/>.
+    ```
+
+2. [Optional] Format your code using [black](https://github.com/psf/black) and [isort](https://github.com/pycqa/isort/). This step is optional because these will be automatically run on any pull requests.
+
+3. Fork [this repo](https://github.com/UNSW-CEEM/CEEM-Gists) or clone and create a new branch
+
+4. Add your source code to the folder that best matches what it does or pertains to.
+    - If you need to create a new folder/page:
+      - Create the folder in [`snippets`](https://github.com/UNSW-CEEM/CEEM-Gists/snippets)
+      - Create a corresponding `.qmd` file in the root of the repository
+      - In the [Quarto YAML config](https://github.com/UNSW-CEEM/CEEM-Gists/_quarto.yml), add the `.qmd` under the snippets menu
+  

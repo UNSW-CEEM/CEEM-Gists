@@ -1,0 +1,43 @@
+project:
+  type: website
+
+website:
+  title: "CEEM Gists"
+  favicon: assets/ceem_logo.png
+  search: true
+  repo-url: https://github.com/UNSW-CEEM/CEEM-Gists
+  repo-actions: [edit, issue]
+  navbar:
+    title: CEEM Gists
+    logo: assets/ceem_logo.png
+    left:
+      - text: Home
+        href: index.qmd
+      - text: "Snippets"
+        menu:
+        - aemo_data.qmd 
+      - text: Contributing
+        href: contributing.qmd
+    right:
+    - icon: house
+      href: https://www.ceem.unsw.edu.au/
+    - icon: linkedin
+      href: https://github.com/UNSW-CEEM
+    - icon: twitter
+      href: https://twitter.com/CEEM_UNSW
+    - icon: github
+      menu:
+        - text: Source Code
+          url:  https://github.com/UNSW-CEEM/CEEM-Gists
+        - text: UNSW CEEM GitHub Organisation Page
+          url:  https://bugs.com
+
+  page-footer: "All source code made available on this site is licensed under GPL-3.0-or-later"
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+
