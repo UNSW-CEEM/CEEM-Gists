@@ -1,3 +1,19 @@
 ---
 title: AEMO Data Snippets
+format:
+  html:
+    code-fold: true
 ---
+
+## Dividing large AEMO Data CSVs into parquet partitions
+
+This script can be run via the command line to divide a large AEMO data CSV (e.g. from the [Monthly Data Archive](https://visualisations.aemo.com.au/aemo/nemweb/index.html#mms-data-model), such as rebids in BIDPEROFFER) into Parquet partitions. This is advantageous for using packages such as [Dask](https://www.dask.org/) to analyse such data.
+
+It assumes that the first row of the table is the header (i.e. columns) for a single data table.
+
+### Requirements
+
+Written using Python 3.11. Uses `pathlib` and type annotations, so probably need at least Python > 3.5.
+
+```python {include="snippets/aemo_data/create_parquet_partitions.py"}
+```
