@@ -1,6 +1,9 @@
 project:
   type: website
 
+filters:
+  - filters/include-code-files.lua
+
 website:
   title: "CEEM Gists"
   favicon: assets/ceem_logo.png
