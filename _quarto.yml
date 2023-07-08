@@ -33,7 +33,7 @@ website:
         - text: Source Code
           url:  https://github.com/UNSW-CEEM/CEEM-Gists
         - text: UNSW CEEM GitHub Organisation Page
-          url:  https://bugs.com
+          url:  https://github.com/UNSW-CEEM
 
   page-footer: "All source code made available on this site is licensed under GPL-3.0-or-later"
 format:
