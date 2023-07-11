@@ -28,10 +28,15 @@ Please only share code snippets or scripts that you are happy to be available pu
 
 2. [Optional] Format your code using [black](https://github.com/psf/black) and [isort](https://github.com/pycqa/isort/). This step is optional because these will be automatically run on any pull requests.
 
-3. Fork [this repo](https://github.com/UNSW-CEEM/CEEM-Gists) or clone and create a new branch
+3. Fork [this repo](https://github.com/UNSW-CEEM/CEEM-Gists) or clone and create a new branch. If you do the latter, make sure you switch to that branch before making any changes (`git checkout <branch_name>`)
 
 4. Add your source code to the folder that best matches what it does or pertains to.
     - If you need to create a new folder/page:
       - Create the folder in [`snippets`](https://github.com/UNSW-CEEM/CEEM-Gists/snippets)
-      - Create a corresponding `.qmd` file in the root of the repository
+      - Create a corresponding `.qmd` file in the root of the repository. You can use the [AEMO data snippets page](https://github.com/UNSW-CEEM/CEEM-Gists/blob/main/aemo_data.qmd) as an example
       - In the [Quarto YAML config](https://github.com/UNSW-CEEM/CEEM-Gists/_quarto.yml), add the `.qmd` under the snippets menu
+
+5. Commit your changes to your branch/fork, and then open a pull request to merge your changes in
+    - This will run pre-commit on all added files
+
+6. Wait for a maintainer to accept the pull request. All done!
