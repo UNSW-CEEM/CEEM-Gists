@@ -199,16 +199,21 @@ ul.task-list li input[type="checkbox"] {
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.</code></pre></li>
 <li><p>[Optional] Format your code using <a href="https://github.com/psf/black">black</a> and <a href="https://github.com/pycqa/isort/">isort</a>. This step is optional because these will be automatically run on any pull requests.</p></li>
-<li><p>Fork <a href="https://github.com/UNSW-CEEM/CEEM-Gists">this repo</a> or clone and create a new branch</p></li>
+<li><p>Fork <a href="https://github.com/UNSW-CEEM/CEEM-Gists">this repo</a> or clone and create a new branch. If you do the latter, make sure you switch to that branch before making any changes (<code>git checkout &lt;branch_name&gt;</code>)</p></li>
 <li><p>Add your source code to the folder that best matches what it does or pertains to.</p>
 <ul>
 <li>If you need to create a new folder/page:
 <ul>
 <li>Create the folder in <a href="https://github.com/UNSW-CEEM/CEEM-Gists/snippets"><code>snippets</code></a></li>
-<li>Create a corresponding <code>.qmd</code> file in the root of the repository</li>
+<li>Create a corresponding <code>.qmd</code> file in the root of the repository. You can use the <a href="https://github.com/UNSW-CEEM/CEEM-Gists/blob/main/aemo_data.qmd">AEMO data snippets page</a> as an example</li>
 <li>In the <a href="https://github.com/UNSW-CEEM/CEEM-Gists/_quarto.yml">Quarto YAML config</a>, add the <code>.qmd</code> under the snippets menu</li>
 </ul></li>
 </ul></li>
+<li><p>Commit your changes to your branch/fork, and then open a pull request to merge your changes in</p>
+<ul>
+<li>This will run pre-commit on all added files</li>
+</ul></li>
+<li><p>Wait for a maintainer to accept the pull request. All done!</p></li>
 </ol>
 
 
