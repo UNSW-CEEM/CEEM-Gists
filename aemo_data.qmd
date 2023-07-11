@@ -3,17 +3,35 @@ title: AEMO Data Snippets
 format:
   html:
     code-fold: true
+    code-overflow: wrap
 ---
 
 ## Dividing large AEMO Data CSVs into parquet partitions
 
-This script can be run via the command line to divide a large AEMO data CSV (e.g. from the [Monthly Data Archive](https://visualisations.aemo.com.au/aemo/nemweb/index.html#mms-data-model), such as rebids in BIDPEROFFER) into Parquet partitions. This is advantageous for using packages such as [Dask](https://www.dask.org/) to analyse such data.
+This script can be run via the command line to divide a large AEMO data CSV (e.g. from the [Monthly Data Archive](https://visualisations.aemo.com.au/aemo/nemweb/index.html#mms-data-model), such as rebids in BIDPEROFFER) into Parquet partitions. This is advantageous for using packages such as [Dask](https://www.dask.org/) or [polars](https://www.pola.rs/) to analyse such data.
 
-It assumes that the first row of the table is the header (i.e. columns) for a single data table.
+Partitions are generated based on the `chunksize` parameter, which specifies a number of line (default $10^6$ lines per chunk). However, this code could be modified to partition data another way (e.g. by date, or by unit ID).
+
+It also assumes that the first row of the table is the header (i.e. columns) for a single data table.
 
 ### Requirements
 
-Written using Python 3.11. Uses `pathlib` and type annotations, so probably need at least Python > 3.5.
+Written using Python 3.11. Uses `pandas` and `tqdm` (progress bar).
 
-```python {include="snippets/aemo_data/create_parquet_partitions.py"}
+Also uses standard library`pathlib` and type annotations, so probably need at least Python > 3.5.
+
+### Usage
+
+```bash
+create_parquet_partitions.py [-h] -file FILE -output_dir OUTPUT_DIR [-chunksize CHUNKSIZE]
 ```
+
+#### Example
+
+```bash
+python create_parquet_partitions.py -file PUBLIC_DVD_BIDPEROFFER_202107010000.CSV -output_dir BIDPEROFFER -chunksize 1000000
+```
+
+### Script
+
+[create_parquet_partitions.py](snippets/aemo_data/create_parquet_partitions.py)
