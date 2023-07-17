@@ -19,6 +19,7 @@ website:
       - text: "Snippets"
         menu:
         - aemo_data.qmd
+        - opennem_facilities.qmd
       - text: Contributing
         href: contributing.qmd
     right:
