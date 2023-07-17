@@ -2,14 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://github.com/UNSW-CEEM/CEEM-Gists/aemo_data.html</loc>
-    <lastmod>2023-07-11T04:26:17.617Z</lastmod>
+    <lastmod>2023-07-17T07:11:38.678Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/UNSW-CEEM/CEEM-Gists/opennem_facilities.html</loc>
+    <lastmod>2023-07-17T07:11:36.562Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/UNSW-CEEM/CEEM-Gists/index.html</loc>
-    <lastmod>2023-07-11T04:26:16.041Z</lastmod>
+    <lastmod>2023-07-17T07:11:34.306Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/UNSW-CEEM/CEEM-Gists/contributing.html</loc>
-    <lastmod>2023-07-11T04:26:16.965Z</lastmod>
+    <lastmod>2023-07-17T07:11:37.786Z</lastmod>
   </url>
 </urlset>
