@@ -1,0 +1,68 @@
+---
+title: openNEM facility data
+format:
+  html:
+    code-fold: true
+    code-overflow: wrap
+---
+
+## Very basic module for downloading and parsing openNEM facility data
+
+This is a simple set of functions for downloading and parsing station and duid meta data from openNEM. 
+
+Essentially works as follows:
+
+- gets the master list of stations from openNEM
+- iteratively downloads and saves the json data for each of the stations within this list (about 400)
+- parses the downloaded data into a flat dataframe
+
+The json data is stored locally, to prevent having to re-download the the every station each time you might want to adapt the parser and/or change the data you want to record. 
+
+The json is validated with pydantic (to deal with missing fields, and other irreularities in the openNEM json). There is probably a smarter way to flatten the validated data to pandas than what I have now, but it does the job. 
+
+Note there are two stations (commented out in the code) that are missing or have another issue. 
+
+### Requirements
+
+Written using Python 3.11. Uses `pandas`, `requests`, `simplejson` and `pydantic` (for json data validation).
+
+### Usage
+
+Before using the module, there is global variable (`LOCALDIR`) that needs to be set to specifify where the station json data is stored. 
+
+To download all the station json:
+
+```python
+import opennem_facilities
+opennem_facilities.download_all_stations()
+```
+
+Top parse the station data:
+
+```python
+import opennem_facilities
+df = opennem_facilities.parse_station_data()
+```
+
+This should return a dataframe as follows (where the `code` here is DUID) 
+
+|    | network_region   | code     | fueltech         |   capacity_registered |      lat |     lon | station_name   | station_code   |
+|---:|:-----------------|:---------|:-----------------|----------------------:|---------:|--------:|:---------------|:---------------|
+|  0 | NSW1             | APPIN    | gas_wcmg         |                  55   | -34.2109 | 150.793 | Appin          | APPIN          |
+|  1 | NSW1             | AVLSF1   | solar_utility    |                 245   | -34.9191 | 146.61  | Avonlie        | AVLSF          |
+|  2 | NSW1             | AWABAREF | bioenergy_biogas |                   1   | -33.0233 | 151.551 | Awaba          | AWABAREF       |
+|  3 | NSW1             | BANGOWF2 | wind             |                  84.8 | -34.7672 | 148.921 | Bango          | BANGOWF        |
+|  ... | ...             | ... | ...             |                 ...   | ... | ... | ...          | ...        |
+
+
+
+### Extending / adapting
+
+To parse additional details / metadata - you would have to adapt the `Station` pydantic model (i.e. add the fields you want to parse), and also adapt the function to flatten the data to pandas as appropriate.  
+
+### code
+
+The code csan be downloaded from here: ['opennem_faciulities.py](snippets/aemo_data/opennem_facilities.py), and is shown below as well:
+
+```python {include="snippets/aemo_data/opennem_facilities.py"}
+```
