@@ -8,7 +8,7 @@ format:
 
 ## Very basic module for downloading and parsing openNEM facility data
 
-This is a simple set of functions for downloading and parsing station and duid meta data from openNEM. 
+This is a simple set of functions for downloading and parsing station and duid meta data from openNEM.
 
 Essentially works as follows:
 
@@ -16,11 +16,11 @@ Essentially works as follows:
 - iteratively downloads and saves the json data for each of the stations within this list (about 400)
 - parses the downloaded data into a flat dataframe
 
-The json data is stored locally, to prevent having to re-download the the every station each time you might want to adapt the parser and/or change the data you want to record. 
+The json data is stored locally, to prevent having to re-download the the every station each time you might want to adapt the parser and/or change the data you want to record.
 
-The json is validated with pydantic (to deal with missing fields, and other irreularities in the openNEM json). There is probably a smarter way to flatten the validated data to pandas than what I have now, but it does the job. 
+The json is validated with pydantic (to deal with missing fields, and other irreularities in the openNEM json). There is probably a smarter way to flatten the validated data to pandas than what I have now, but it does the job.
 
-Note there are two stations (commented out in the code) that are missing or have another issue. 
+Note there are two stations (commented out in the code) that are missing or have another issue.
 
 ### Requirements
 
@@ -28,7 +28,7 @@ Written using Python 3.11. Uses `pandas`, `requests`, `simplejson` and `pydantic
 
 ### Usage
 
-Before using the module, there is global variable (`LOCALDIR`) that needs to be set to specifify where the station json data is stored. 
+Before using the module, there is global variable (`LOCALDIR`) that needs to be set to specifify where the station json data is stored.
 
 To download all the station json:
 
@@ -44,7 +44,7 @@ import opennem_facilities
 df = opennem_facilities.parse_station_data()
 ```
 
-This should return a dataframe as follows (where the `code` here is DUID) 
+This should return a dataframe as follows (where the `code` here is DUID)
 
 |    | network_region   | code     | fueltech         |   capacity_registered |      lat |     lon | station_name   | station_code   |
 |---:|:-----------------|:---------|:-----------------|----------------------:|---------:|--------:|:---------------|:---------------|
@@ -58,7 +58,7 @@ This should return a dataframe as follows (where the `code` here is DUID)
 
 ### Extending / adapting
 
-To parse additional details / metadata - you would have to adapt the `Station` pydantic model (i.e. add the fields you want to parse), and also adapt the function to flatten the data to pandas as appropriate.  
+To parse additional details / metadata - you would have to adapt the `Station` pydantic model (i.e. add the fields you want to parse), and also adapt the function to flatten the data to pandas as appropriate.
 
 ### code
 
